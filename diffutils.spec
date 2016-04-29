@@ -4,7 +4,7 @@
 #
 Name     : diffutils
 Version  : 3.3
-Release  : 13
+Release  : 14
 URL      : http://ftp.gnu.org/gnu/diffutils/diffutils-3.3.tar.xz
 Source0  : http://ftp.gnu.org/gnu/diffutils/diffutils-3.3.tar.xz
 Summary  : No detailed summary available
