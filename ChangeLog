@@ -1,4 +1,80 @@
+2016-08-20  Jim Meyering  <meyering@fb.com>
+
+	version 3.5
+	* NEWS: Record release date.
+
+2016-08-16  Jim Meyering  <meyering@fb.com>
+
+	build: arrange to build with -fno-common, when possible
+	* configure.ac (WERROR_CFLAGS): Add -fno-common, when possible.
+	This would have prevented the duplicate definition of
+	presume_output_tty that was fixed in v3.4-10-gc2dc91f.
+
+2016-08-16  Hanno Böck  <hanno@hboeck.de>
+
+	diff: avoid duplicate definition of presume_output_tty
+	* src/util.c (presume_output_tty): Remove this definition.
+	The other is in diff.h.  Reported in https://bugs.gnu.org/24248
+
+2016-08-14  Jim Meyering  <meyering@fb.com>
+
+	gnulib: update to latest
+
+	tests: diff3: work around missing seq on some systems
+	* tests/diff3 (seq): Provide a seq replacement function,
+	since at least AIX, SunOS 5.10, OpenBSD-5.8 lack it.
+	Reported by Assaf Gordon in https://bugs.gnu.org/24227#8
+
+2016-08-13  Jim Meyering  <meyering@fb.com>
+
+	diff3: fix leaks, for real
+	* src/diff3.c (struct diff_block)[lint]: Add member, n2.
+	(free_diff_block, next_to_n2): New functions.
+	* tests/diff3: Add more test coverage.
+
+	maint: require that commit messages be of a certain form
+	* bootstrap.conf (bootstrap_epilogue): Merge from coreutils, so that
+	a local commit hook will now help enforce consistent commit messages.
+	* Makefile.am (check-git-hook-script-sync): New rule, largely copied
+	from coreutils.
+	* scripts/git-hooks/commit-msg: New file, from coreutils, but
+	with adapted list of program names.
+	* scripts/git-hooks/applypatch-msg: New file, from git.
+	* scripts/git-hooks/pre-applypatch: Likewise.
+	* scripts/git-hooks/pre-commit: Likewise.
+
+2016-08-13  Bastian Beischer  <bastian.beischer@rwth-aachen.de>
+
+	diff3: fix heap use-after-free; add minimal diff3 test coverage
+	Commit v3.3-42-g3b74a90, "FIXME: src/diff3: plug a leak" added an
+	invalid use of free, leading to use-after-free in nearly any invocation
+	of diff3.  Revert that commit.
+	* NEWS (Bug fixes): Mention it.
+	* tests/diff3: New file, to add minimal test coverage.
+	* tests/Makefile.am (TESTS): Add it.
+	Reported by Bastian Beischer in http://bugs.gnu.org/24210
+
+2016-08-13  Jim Meyering  <meyering@fb.com>
+
+	build: ignore texinfo build artifacts
+	* .gitignore: Ignore texinfo artifacts in doc/.
+
+	maint: diff3: remove an unreachable statement
+	* src/diff3.c (main): Remove unreachable "return" after exit from main.
+
 2016-08-08  Jim Meyering  <meyering@fb.com>
+
+	diff: disable colorization for TERM=dumb
+	* src/diff.c (main): With --color or --color=auto, when TERM is
+	"dumb", disable colorization.  Suggested by Daniel Colascione.
+	* NEWS (Bug fixes): Mention it.
+	* tests/colors: Add a test that would fail without this change,
+	yet passes with it.
+
+	maint: post-release administrivia
+	* NEWS: Add header line for next release.
+	* .prev-version: Record previous version.
+	* cfg.mk (old_NEWS_hash): Auto-update.
 
 	version 3.4
 	* NEWS: Record release date.

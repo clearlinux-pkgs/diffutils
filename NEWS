@@ -1,5 +1,15 @@
 GNU diffutils NEWS                                    -*- outline -*-
 
+* Noteworthy changes in release 3.5 (2016-08-20) [stable]
+
+** Bug fixes
+
+  diff3 no longer malfunctions due to use-after-free
+  [bug introduced in 3.4]
+
+  diff --color no longer colorizes when TERM=dumb
+
+
 * Noteworthy changes in release 3.4 (2016-08-08) [stable]
 
 ** New features
