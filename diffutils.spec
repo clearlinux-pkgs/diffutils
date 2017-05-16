@@ -4,7 +4,7 @@
 #
 Name     : diffutils
 Version  : 3.5
-Release  : 17
+Release  : 18
 URL      : http://ftp.gnu.org/gnu/diffutils/diffutils-3.5.tar.xz
 Source0  : http://ftp.gnu.org/gnu/diffutils/diffutils-3.5.tar.xz
 Summary  : No detailed summary available
