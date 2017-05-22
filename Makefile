@@ -1,5 +1,5 @@
 PKG_NAME := diffutils
-URL := http://ftp.gnu.org/gnu/diffutils/diffutils-3.5.tar.xz
-ARCHIVES :=
+URL := http://ftp.gnu.org/gnu/diffutils/diffutils-3.6.tar.xz
+
 
 include ../common/Makefile.common
