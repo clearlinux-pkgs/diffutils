@@ -6,7 +6,7 @@
 #
 Name     : diffutils
 Version  : 3.6
-Release  : 20
+Release  : 21
 URL      : http://ftp.gnu.org/gnu/diffutils/diffutils-3.6.tar.xz
 Source0  : http://ftp.gnu.org/gnu/diffutils/diffutils-3.6.tar.xz
 Source99 : http://ftp.gnu.org/gnu/diffutils/diffutils-3.6.tar.xz.sig
