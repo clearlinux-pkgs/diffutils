@@ -6,10 +6,10 @@
 #
 Name     : diffutils
 Version  : 3.6
-Release  : 21
-URL      : http://ftp.gnu.org/gnu/diffutils/diffutils-3.6.tar.xz
-Source0  : http://ftp.gnu.org/gnu/diffutils/diffutils-3.6.tar.xz
-Source99 : http://ftp.gnu.org/gnu/diffutils/diffutils-3.6.tar.xz.sig
+Release  : 22
+URL      : https://mirrors.kernel.org/gnu/diffutils/diffutils-3.6.tar.xz
+Source0  : https://mirrors.kernel.org/gnu/diffutils/diffutils-3.6.tar.xz
+Source99 : https://mirrors.kernel.org/gnu/diffutils/diffutils-3.6.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0 GPL-3.0+
@@ -54,9 +54,9 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1495461038
+export SOURCE_DATE_EPOCH=1520541601
 %configure --disable-static
-make V=1  %{?_smp_mflags}
+make  %{?_smp_mflags}
 
 %check
 export LANG=C
@@ -66,7 +66,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1495461038
+export SOURCE_DATE_EPOCH=1520541601
 rm -rf %{buildroot}
 %make_install
 %find_lang diffutils
