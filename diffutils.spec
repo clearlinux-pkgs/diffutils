@@ -6,7 +6,7 @@
 #
 Name     : diffutils
 Version  : 3.6
-Release  : 22
+Release  : 23
 URL      : https://mirrors.kernel.org/gnu/diffutils/diffutils-3.6.tar.xz
 Source0  : https://mirrors.kernel.org/gnu/diffutils/diffutils-3.6.tar.xz
 Source99 : https://mirrors.kernel.org/gnu/diffutils/diffutils-3.6.tar.xz.sig
