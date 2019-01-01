@@ -3,11 +3,13 @@ Configure miss: mbslen
 Configure miss: strcasecoll
 Configure miss: stricoll
 Configure miss: precise C stack overflow detection
+Configure miss: 32-bit host C ABI
 Configure miss: libsigsegv
 Configure miss: strerror_r with POSIX signature
 Configure miss: __mktime_internal
+Configure miss: working re_compile_pattern
+Configure miss: whether localtime loops forever near extrema
 Configure miss: timezone_t
 Configure miss: whether tzset clobbers localtime buffer
-Configure miss: a turkish Unicode locale
 Configure miss: ioctl with POSIX signature
 Configure miss: working nanosleep
