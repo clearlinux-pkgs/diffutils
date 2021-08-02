@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x7FD9FCCB000BEEEE (meyering@fb.com)
 #
 Name     : diffutils
-Version  : 3.7
-Release  : 27
-URL      : https://mirrors.kernel.org/gnu/diffutils/diffutils-3.7.tar.xz
-Source0  : https://mirrors.kernel.org/gnu/diffutils/diffutils-3.7.tar.xz
-Source1  : https://mirrors.kernel.org/gnu/diffutils/diffutils-3.7.tar.xz.sig
+Version  : 3.8
+Release  : 28
+URL      : https://mirrors.kernel.org/gnu/diffutils/diffutils-3.8.tar.xz
+Source0  : https://mirrors.kernel.org/gnu/diffutils/diffutils-3.8.tar.xz
+Source1  : https://mirrors.kernel.org/gnu/diffutils/diffutils-3.8.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0 GPL-3.0+
@@ -67,15 +67,15 @@ man components for the diffutils package.
 
 
 %prep
-%setup -q -n diffutils-3.7
-cd %{_builddir}/diffutils-3.7
+%setup -q -n diffutils-3.8
+cd %{_builddir}/diffutils-3.8
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1605125407
+export SOURCE_DATE_EPOCH=1627926534
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -92,10 +92,10 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1605125407
+export SOURCE_DATE_EPOCH=1627926534
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/diffutils
-cp %{_builddir}/diffutils-3.7/COPYING %{buildroot}/usr/share/package-licenses/diffutils/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/diffutils-3.8/COPYING %{buildroot}/usr/share/package-licenses/diffutils/8624bcdae55baeef00cd11d5dfcfa60f68710a02
 %make_install
 %find_lang diffutils
 

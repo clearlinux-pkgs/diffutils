@@ -1,5 +1,29 @@
 GNU diffutils NEWS                                    -*- outline -*-
 
+* Noteworthy changes in release 3.8 (2021-08-01) [stable]
+
+** Incompatible changes
+
+  diff no longer treats a closed stdin as representing an absent file
+  in usage like 'diff --new-file - foo <&-'.  This feature was rarely
+  if ever used and was not portable to POSIX platforms that reopen
+  stdin on exec, such as SELinux if the process underwent an AT_SECURE
+  transition, or HP-UX even if not setuid.
+  [bug#33965 introduced in 2.8]
+
+** Bug fixes
+
+  diff and related programs no longer get confused if stdin, stdout,
+  or stderr are closed.  Previously, they sometimes opened files into
+  file descriptors 0, 1, or 2 and then mistakenly did I/O with them
+  that was intended for stdin, stdout, or stderr.
+  [bug#33965 present since "the beginning"]
+
+  cmp, diff and sdiff no longer treat negative command-line
+  option-arguments as if they were large positive numbers.
+  [bug#35256 introduced in 2.8]
+
+
 * Noteworthy changes in release 3.7 (2018-12-31) [stable]
 
 ** Bug fixes
@@ -323,12 +347,12 @@ User-visible changes in version 2.4:
       printed according to the printf specification.
       E.g. '%5df' prints the number of the first line in the
       group in the old file using the "%5d" format.
-	e: line number just before the group in old file; equals f - 1
-	f: first line number in group in the old file
-	l: last line number in group in the old file
-	m: line number just after the group in old file; equals l + 1
-	n: number of lines in group in the old file; equals l - f + 1
-	E, F, L, M, N: likewise, for lines in the new file
+        e: line number just before the group in old file; equals f - 1
+        f: first line number in group in the old file
+        l: last line number in group in the old file
+        m: line number just after the group in old file; equals l + 1
+        n: number of lines in group in the old file; equals l - f + 1
+        E, F, L, M, N: likewise, for lines in the new file
   %(A=B?T:E)
       If A equals B then T else E.  A and B are each either a decimal
       constant or a single letter interpreted as above.  T and E are
@@ -418,7 +442,7 @@ User-visible changes in version 2.0:
 
 
 
-Copyright (C) 1993-1994, 1998, 2001-2002, 2004, 2006, 2009-2013, 2015-2018 Free
+Copyright (C) 1993-1994, 1998, 2001-2002, 2004, 2006, 2009-2013, 2015-2021 Free
 Software Foundation, Inc.
 
 This file is part of GNU Diffutils.
