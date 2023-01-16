@@ -1,20 +1,21 @@
 Configure miss: 32-bit host C ABI
 Configure miss: __mktime_internal
+Configure miss: bool, true, false
 Configure miss: compiler option needed when checking for declarations
 Configure miss: crtdefs.h
+Configure miss: gcc option to enable large file support
 Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: ioctl with POSIX signature
 Configure miss: mbslen
-Configure miss: pthread_kill in -lpthread
+Configure miss: stdckdint.h
 Configure miss: strcasecoll
 Configure miss: strerror_r with POSIX signature
 Configure miss: stricoll
 Configure miss: timezone_t
+Configure miss: whether ctype.h defines __header_inline
 Configure miss: whether mbrtowc stores incomplete characters
 Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
 Configure miss: whether pthread_sigmask is a macro
 Configure miss: whether the compiler is clang
 Configure miss: whether the compiler produces multi-arch binaries
-Configure miss: working iconv
 Configure miss: working nanosleep
-Configure miss: working re_compile_pattern
