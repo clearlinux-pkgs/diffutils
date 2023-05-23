@@ -1,5 +1,16 @@
 GNU diffutils NEWS                                    -*- outline -*-
 
+* Noteworthy changes in release 3.10 (2023-05-21) [stable]
+
+** Bug fixes
+
+  cmp/diff can again work with file dates past Y2K38
+  [bug introduced in 3.9]
+
+  diff -D no longer fails to output #ifndef lines.
+  [bug#61193 introduced in 3.9]
+
+
 * Noteworthy changes in release 3.9 (2023-01-15) [stable]
 
 ** Bug fixes
