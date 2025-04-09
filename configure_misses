@@ -1,7 +1,5 @@
 Configure miss: 32-bit host C ABI
 Configure miss: 32-bit host C ABI
-Configure miss: Solaris 11.4 locale system
-Configure miss: Solaris 11.4 locale system
 Configure miss: __mktime_internal
 Configure miss: __mktime_internal
 Configure miss: clean definition of __STDC_VERSION_STDDEF_H__
@@ -10,8 +8,6 @@ Configure miss: compiler option needed when checking for declarations
 Configure miss: compiler option needed when checking for declarations
 Configure miss: crtdefs.h
 Configure miss: crtdefs.h
-Configure miss: fake locale system (OpenBSD)
-Configure miss: fake locale system (OpenBSD)
 Configure miss: gcc -std=gnu23 option to support large files
 Configure miss: gcc -std=gnu23 option to support large files
 Configure miss: gcc -std=gnu23 option to support timestamps after 2038
@@ -46,6 +42,10 @@ Configure miss: whether ctype.h defines __header_inline
 Configure miss: whether ctype.h defines __header_inline
 Configure miss: whether fflush works on input streams
 Configure miss: whether fflush works on input streams
+Configure miss: whether langinfo.h defines ABALTMON_1
+Configure miss: whether langinfo.h defines ABALTMON_1
+Configure miss: whether locale.h defines _locale_t
+Configure miss: whether locale.h defines _locale_t
 Configure miss: whether mbrtowc stores incomplete characters
 Configure miss: whether mbrtowc stores incomplete characters
 Configure miss: whether nullptr_t needs <stddef.h>
